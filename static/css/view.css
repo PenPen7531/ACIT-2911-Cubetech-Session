@@ -1,0 +1,151 @@
+*{
+    font-family: monospace;
+}
+.name{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 20px;
+    text-align: right;
+    padding-left: 15px;
+    padding-bottom: 40px;
+}
+
+
+
+.emp_id{
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 2rem;
+}
+.home{
+    font-size: 20px;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: #4675C0;
+}
+
+h3{
+    font-size: large;
+}
+
+
+.nav_bar{
+    width: 100vh;
+    display: flex;  
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-size: 18px;
+    gap: 10px;
+}
+
+
+.home-tag {
+    font-size: 35px;
+    color:  #4675C0;
+    font-weight: bold;
+}
+
+#home-nav .home-tag {
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+#home-nav a {
+    font-size: 16px;
+    text-decoration: none;
+    /*color: rgb(83, 80, 80);*/
+    color: white; 
+}
+
+#home-nav a:hover {
+    color: #4675C0;
+    background-color: white;
+    text-shadow: 1px rgba(75, 73, 73, 0.79)
+}
+
+#home-nav {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 20px;
+    text-align: right;
+    padding-right: 15px;
+    padding-bottom: 40px;
+}
+
+table, th{
+    border: 1px solid;
+    padding: 30px;
+    text-align: center;
+}   
+
+.table-head {
+    background: #2980b9;
+    color: white;
+}
+
+.table-data {
+    text-align: right;
+}
+
+.data-field {
+    text-align: left;
+}
+
+.table-div {
+    width: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+th, td {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 600px) {
+    .emp_id {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .content {
+        margin: auto;
+        width: 95%;
+        padding: 10px;
+    }
+
+    .table-div .table {
+        width: 30%;
+    }
+
+    .nav_bar {
+        width: 75%;
+    }
+}

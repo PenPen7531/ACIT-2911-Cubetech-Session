@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+    font-family: monospace;
+  }
+
+  h1 {
+      font-size: 32px;
+      color: #4675C0;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+  }
+
+  #title-home {
+      font-size: 32px;
+      color: #4675C0;
+  }
+
+  .home-post-form {
+      width: 50%;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-self: flex-end;
+  }
+
+  #style-one {
+      text-align: right;
+      padding-left: 5.5%;
+      gap: 3px;
+  }
+
+  #style-two {
+      align-self: flex-end;
+  }
+
+  .home-post-form button {
+      font-size: 14px;
+  }
+
+  table, th, td {
+    border: 1px solid;
+    padding: 30px;
+    text-align: center;
+}   
+
+table {
+    border-collapse: collapse;
+    top: 0;
+    width: 100%;
+}
+
+th, td {
+    padding: 5px;
+    font-size: 16px;
+}
+
+th:hover {
+    cursor: pointer;
+}
+
+#employee-table {
+    margin-top: 25px;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+#table-container {
+    height: 500px;
+    overflow: auto;
+}
+
+#create-emp {
+    color: #31748f;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#create-emp:hover {
+    text-decoration: underline;
+}
+
+tr a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #0d6efd;
+}
+
+tr a:hover {
+    text-decoration: underline;
+}
+
+label {
+    font-family: monospace ;
+    font-weight: bold;
+}
+
+.flex-mid {
+    padding-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1-head {
+    font-size: 7em;
+}
+
+label, input {
+    font-size: 1.5em;
+}
+
+.input-right {
+    font-size: 1.75em;
+}
+
+.login-a {
+    font-size: .875em;
+    text-decoration: none;
+}
+
+.login-btns {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#post-form {
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+}
+
+#create-admin-input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#flex-mid > h1 {
+    background-color: #2e902c;
+    padding-right: 5rem;
+    margin-bottom: 5rem;
+}
+
+#post-form a {
+    text-decoration: none;
+}
+
+#home-nav {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 20px;
+    text-align: right;
+    padding-right: 15px;
+    padding-bottom: 40px;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+}
+
+.main-heading {
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search-top {
+    display: flex;
+    flex-direction: row;
+}
+
+#home-nav .home-tag {
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+#home-nav a {
+    font-family: arial,sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(83, 80, 80);
+}
+
+#home-nav a:hover {
+    color: black;
+    text-shadow: 1px rgba(75, 73, 73, 0.79)
+}
+
+.home-tag {
+    font-size: 35px;
+    color:  #4675C0;
+    font-weight: bold;
+}
+
+#dep-search {
+    width: 210px;
+    height: 27px;
+}
+
+.search-icon {
+    background-color: transparent;
+    border: none;
+}
+
+#search-label {
+    font-family: arial,sans-serif;
+    color: #4675C0;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #d4e1f6;
+ }
+
+#clear-filter {
+    color: rgba(255, 0, 0, 0.523);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.errors h1,p{
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+}
+
+.signup-btns {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.signup-btns a {
+    text-decoration: none;
+}
+
+.signup-btns button {
+    width: 175px;
+}
+
+#sad-face {
+    font-size: 6rem;
+}
+
+#table-data {
+    margin: auto;
+    width: 100%;
+}
+
+.emp_sum > p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    width: 125px;
+    cursor: pointer;
+  }
+  
+/* The actual popup */
+/* .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+} */
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#emp-sal {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: row;
+}
+
+#emp-sal p {
+    font-size: 18px;
+}
+
+#home-nav .icon {
+    display: none;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#home-nav .icon-close {
+    font-size: 30px;
+    color: black;
+}
+
+#menu div {
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 50px;
+}
+
+.icon-close {
+    display: none;
+}
+/* Popup arrow */
+/* .popup .popuptext::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: #555 transparent transparent transparent;
+} */
+
+/* Toggle this class - hide and show the popup
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+
+/* Add animation (fade in the popup) */
+/* @-webkit-keyframes fadeIn {
+from {opacity: 0;} 
+to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity:1 ;}
+} */ 
+
+
+
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 13px;
+    }
+
+    .home-content {
+        flex-direction: column;
+        overflow-x: auto;
+    }
+
+    #home-nav h3 {
+        align-self: flex-end;
+    }
+ 
+
+    #table-data {
+        margin-top: 200px
+    }
+
+    .search-top {
+        position: absolute;
+        flex-direction: column;
+        align-content: flex-start;
+    }
+
+    .home-post-form {
+        width: auto;
+    }
+
+    #style-one {
+        padding-left: 0;
+        text-align: left;
+        align-self: start;
+    }
+
+    #style-two {
+        align-self: start;
+    }
+
+    #home-nav .icon {
+        font-size: 24px;
+        display: block;
+    }
+
+    .icon-two {
+        display: block;
+    }
+
+    #menu { /*display */
+        right: 0;
+        display: none;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+
+    #menu h3 {
+        margin: 30px;
+    }
+
+    #menu h3 a{
+        color: black;
+        font-size: 32px;
+    }
+}
