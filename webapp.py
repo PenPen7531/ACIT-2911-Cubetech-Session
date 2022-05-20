@@ -68,6 +68,7 @@ def login():
             return redirect("/view")
 
         return render_template("exist.html"), 404
+    return "invalid method", 404
 
 
 @app.route("/view", methods=["GET", "POST"])
@@ -370,7 +371,7 @@ def create_admin():
         new_company = Company(new_admin.database)
         new_company.save()
         return redirect("/")    
-
+    return redirect("/")  
 
 @app.route("/confirm", methods=["GET", "POST"])
 def delete_admin():
