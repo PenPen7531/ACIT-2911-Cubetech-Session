@@ -68,7 +68,7 @@ def login():
             return redirect("/view")
 
         return render_template("exist.html"), 404
-    return "invalid method", 404
+    
 
 
 @app.route("/view", methods=["GET", "POST"])
@@ -143,19 +143,21 @@ def create_page():
             employee_department = request.form.get("employee_department")
             employee_salary = request.form.get("employee_salary")
             employee_age = request.form.get("employee_age")
-            new_emp = Employee(employee_fname, employee_lname, employee_id,
+            if COMPANY.check_ID(employee_id): 
+                new_emp = Employee(employee_fname, employee_lname, employee_id,
                                 employee_department, int(employee_salary), int(employee_age))
-            COMPANY.add(new_emp)
-            COMPANY.save()
-            today=date.today()
-            time=datetime.now(tz=pytz.utc)
-            time=time.astimezone(timezone('US/Pacific'))
-            action=Data(today.strftime("%b-%d-%Y"),f"{time.hour}:{time.minute}",f"Created Employee: {employee_fname}") 
-            LOGS.add(action)
-            LOGS.save()
-            return redirect("/view")
-
-    return render_template("signin_error.html")
+                COMPANY.add(new_emp)
+                COMPANY.save()
+                today = date.today()
+                time = datetime.now()
+                action = Data(today.strftime(
+                    "%b-%d-%Y"), f"{time.hour}:{time.minute}", f"Created Employee: {employee_fname}")
+                LOGS.add(action)
+                LOGS.save()
+                return redirect("/view"), 302
+            return "This ID is already taken", 404
+    else:
+        return render_template("signin_error.html"), 201
 
 
 @app.route("/delete/<employee_id>")
@@ -371,7 +373,7 @@ def create_admin():
         new_company = Company(new_admin.database)
         new_company.save()
         return redirect("/")    
-    return redirect("/")  
+    
 
 @app.route("/confirm", methods=["GET", "POST"])
 def delete_admin():

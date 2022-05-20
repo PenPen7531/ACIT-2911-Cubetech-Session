@@ -77,3 +77,9 @@ class Company():
             if employee.first_name==fname and employee.employee_department==dept:
                 employee_list.append(employee)
         return employee_list
+
+    def check_ID(self, emp_id):
+        for employee in self.employees:
+            if employee.employee_id==emp_id:
+                return False
+        return True

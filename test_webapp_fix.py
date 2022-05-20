@@ -73,6 +73,9 @@ def edit_employee(client):
         employee_age=24
     ), follow_redirects=True)
 
+def test_invalid_create(client):
+    assert add_employee(client).status_code==201
+
 def name_search(client, dep, fname):
     return client.post('/fname/Barker', data=dict(
         department=dep,
@@ -117,14 +120,14 @@ def test_invalid_employee_view(invalid_client):
 
 
 
-def test_invalid_create(invalid_client):
-    assert invalid_client.get("/create").status_code==200
+def test_invalid_create_page(invalid_client):
+    assert invalid_client.get("/create").status_code==201
 
 def test_valid_create_get(client):
     assert client.get("/create").status_code==200
 
 def test_add_employee(client):
-    assert add_employee(client).status_code==201
+    assert add_employee(client).status_code==404
 
 def test_valid_employee_view(client):
     assert client.get("/view/A01").status_code==200
