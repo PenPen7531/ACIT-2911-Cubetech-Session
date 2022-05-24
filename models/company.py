@@ -19,6 +19,11 @@ class Company():
                         employee["employee_department"],
                         employee["employee_salary"],
                         employee["employee_age"],
+                        employee["employee_email"],
+                        employee["employee_phone"],
+                        employee["employee_address"],
+                        employee["employee_gender"],
+                        employee["date_hired"]
 
                     ) for employee in json.load(file)
                 ]
@@ -29,6 +34,12 @@ class Company():
         if type(employee) is not Employee:
             raise TypeError
         self.employees.append(employee)
+
+    def check_ID(self, emp_id):
+        for employee in self.employees:
+            if employee.employee_id == emp_id:
+                return False
+        return True
 
     def find_employee_by_id(self, employee_id):
         for employee in self.employees:
@@ -65,21 +76,22 @@ class Company():
         return num_emp
 
     def find_employees_by_fname(self, employee_name):
-        employee_list=[]
+        employee_list = []
         for employee in self.employees:
             if employee.first_name == employee_name:
                 employee_list.append(employee)
         return employee_list
 
     def find_employee_by_fname_department(self, fname, dept):
-        employee_list=[]
+        employee_list = []
         for employee in self.employees:
-            if employee.first_name==fname and employee.employee_department==dept:
+            if employee.first_name == fname and employee.employee_department == dept:
                 employee_list.append(employee)
         return employee_list
 
-    def check_ID(self, emp_id):
+    def emp_count_by_department(self, department):
+        dep_emp_list = []
         for employee in self.employees:
-            if employee.employee_id==emp_id:
-                return False
-        return True
+            if employee.employee_department == department:
+                dep_emp_list.append(employee)
+        return len(dep_emp_list)

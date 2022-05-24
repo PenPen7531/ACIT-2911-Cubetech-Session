@@ -1,3 +1,4 @@
+from models.employee import Employee
 import pytest
 import webapp
 from flask import session
@@ -53,7 +54,12 @@ def add_employee(client):
         employee_id="A01", 
         employee_department="Accounting",
         employee_salary=25000,
-        employee_age=23
+        employee_age=23,
+        employee_phone="604-464-3393",
+        employee_email="jack@gmail.com",
+        employee_address="2555 Test Me",
+        employee_gender="IDK",
+        date_hired="June 6, 1944"
     ), follow_redirects=True)
 
 def delete_db(client, username, password, db):
@@ -70,7 +76,12 @@ def edit_employee(client):
         employee_id="A02", 
         employee_department="Sales",
         employee_salary=250500,
-        employee_age=24
+        employee_age=24,
+        employee_phone="604-464-3393",
+        employee_email="jack@gmail.com",
+        employee_address="2555 Test Me",
+        employee_gender="IDK",
+        date_hired="June 6, 1944"
     ), follow_redirects=True)
 
 def test_invalid_create(client):
