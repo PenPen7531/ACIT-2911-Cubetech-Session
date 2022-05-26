@@ -286,7 +286,7 @@ def show_firstname(employee_firstname):
         LOGS=Logs(COMPANY.name)
         if request.method == "GET":
             employees = COMPANY.find_employees_by_fname(employee_firstname)
-            return render_template("department.html", department=employees)
+            return render_template("fname.html", department=employees)
         if request.method == "POST":
             fname=request.form.get("first_name")
             department = request.form.get("department")
