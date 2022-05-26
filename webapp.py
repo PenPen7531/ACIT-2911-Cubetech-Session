@@ -26,7 +26,6 @@ COMPANY=False
 @app.route("/", methods=["GET", "POST"])
 def login():
     user = Login()
-    session["user"]=None
     # If the request method is GET. Sends the webpage to the client
     if request.method == "GET":
         return render_template("login.html"), 201
