@@ -250,7 +250,8 @@ def show_department(employee_department):
         LOGS=Logs(COMPANY.name)
         if request.method == "GET":
             department = COMPANY.find_employees_by_department(employee_department)
-            return render_template("department.html", department=department)
+            COMPANY.emp_count_by_department(department)
+            return render_template("department.html", department=department, emp_depart=employee_department, search=len(department), company=COMPANY)
         if request.method == "POST":
                 fname=request.form.get("first_name")
                 department = request.form.get("department")
